@@ -1,0 +1,22 @@
+body{
+  color: white;
+  background: cadetblue;
+}
+.name-titulo{
+  text-decoration: none;
+  color:aqua
+}
+.login{
+  text-decoration: none;
+  color:aqua;
+}
+.mensaje-conectado{
+  text-decoration: none;
+  color:yellowgreen;
+}
+.Formulario{
+  height:"100vh";
+  justify-content: "center";
+  padding-left:40%;
+  padding-top: 5%;
+}
