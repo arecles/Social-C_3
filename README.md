@@ -304,7 +304,7 @@ module.exports = {createChat, findUserChats, findChat};
 ```
 
 
-# 5. Principios SOLID
+# 5. Principios SOLID (Laboratorio 11)
 ### 5.1 Principio de Responsabilidad Única
 La función `postRequest` tiene una sola responsabilidad, que es manejar solicitudes HTTP POST y manejar las respuestas asociadas.
 
@@ -339,10 +339,8 @@ export const postRequest = async(url, body) => {
 ```
 
 
-### 5.2 Principio de Inversión de Dependencia (DIP):
-El componente `AutorContextProvider` aplica el principio DIP al depender de abstracciones en lugar de detalles concretos. Utiliza el contexto proporcionado por React (`createContext`), y se comunica con las funciones de servicio (`postRequest`) a través de una interfaz abstracta.
 
-### 5.3 Principio de Abierto/Cerrado (OCP):
+### 5.2 Principio de Abierto/Cerrado (OCP):
 El diseño del componente AutorContextProvider es modular y extensible. Puede agregar más funciones o características en el futuro sin necesidad de modificar el código existente en gran medida.
 
 ```jsx
