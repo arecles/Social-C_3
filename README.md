@@ -39,4 +39,23 @@ El sistema debe:
 - Permitir almacenar y modificar publicaciones, comentarios y perfiles.
 - Notificar al usuario sobre algún evento ocurrido en su cuenta (mensajes, publicaciones, anuncios del sistema).
 
+### 2.3. Características de los usuarios
+
+- **Administrador:** Encargado de moderar (prohibir, eliminar) publicaciones y usuarios.
+- **Usuario:** Realizar cambios (publicar, comentar, editar, chatear) y navegar.
+
+### 2.4. Restricciones
+
+- Interfaz para ser usada con conexión a internet.
+- El sistema se diseñará con arquitectura MVP (Model View Controller).
+- Lenguajes y tecnologías: Android, Kotlin, Frameworks.
+- Sistema de mensajería de Google Gmail.
+
+### 2.5. Suposiciones y dependencias
+
+- Se asume que los requisitos descritos son estables dentro del alcance del sistema.
+- Los equipos en los que se ejecutará el sistema deben cumplir con los requisitos tecnológicos del sistema para su correcto funcionamiento.
+
+
+
 
