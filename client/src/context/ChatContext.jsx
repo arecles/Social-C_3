@@ -14,6 +14,7 @@ export const ChatContextProvider = ({children, user}) => {
     const [isMessagesLoading,setIsMessagesLoading]=useState(false);
     const [messagesError,setMessagesError]=useState(null);
 
+    console.log("messages", messages);
     
     useEffect(()=>{
         const getUsers=async()=>{
@@ -22,7 +23,7 @@ export const ChatContextProvider = ({children, user}) => {
                 return console.log("Error al obtener usuarios,response",response)
             }
             const pChats=response.filter((u)=>{
-                let isChatCreated=false
+                let isChatCreated=false;
                 if(user?._id===u._id)return false;
                 if(userChats){
                     isChatCreated=userChats?.some((chat)=>{
@@ -33,8 +34,8 @@ export const ChatContextProvider = ({children, user}) => {
             });
             setPotentialChats(pChats)
         };
-        getUsers()
-    },[userChats])
+        getUsers();
+    },[userChats]);
 
     useEffect(() => {
 
@@ -73,16 +74,16 @@ export const ChatContextProvider = ({children, user}) => {
                 setIsMessagesLoading(false);
                 
                 if(response.error){
-                    return setUserChatsError(response);
+                    return setMessagesError(response);
                 }
 
-                setUserChats(response);
+                setMessages(response);
             
         }
 
-        getUserChats();
+        getMessages();
 
-    }, [user])
+    }, [currentChat])
 
 
 
@@ -109,6 +110,9 @@ export const ChatContextProvider = ({children, user}) => {
         potentialChats,
         createChat,
         updateCurrentChat,
+        messages,
+        isMessagesLoading,
+        messagesError,
         }}
     >
         {children}
