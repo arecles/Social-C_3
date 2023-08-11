@@ -73,6 +73,7 @@ El sistema debe:
 | Escenario alternativo      | El usuario/administrador ingresa su nombre de usuario o contraseña incorrecta. 1a1.  El sistema notifica los datos incorrectos al usuario/administrador. El usuario/administrador no resuelve de manera correcta el captcha. 2a1.  El sistema notifica error de login. |
 | Escenarios de excepción    | El usuario/administrador no ingresa ningún dato. |
 
+
 | Designación                | RF03                       |
 |----------------------------|----------------------------|
 | Nombre                     | Registro                   |
