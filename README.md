@@ -21,3 +21,22 @@ Con Social-C, una red social en plataforma móvil, los usuarios podrán interact
 ### 1.4 Referencias
 
 [IEEE. 2008. “Especificación de Requisitos según el estándar de IEEE 830”](https://www.fdi.ucm.es/profesor/gmendez/docs/is0809/ieee830.pdf)
+
+## 2. Descripción general
+
+En esta sección se presentan las características del sistema, incluyendo sus funcionalidades, agentes de uso y restricciones.
+
+### 2.1. Perspectiva del producto
+
+El sistema Social-C será implementado para ser navegado en una plataforma móvil, lo que permitirá un acceso y uso sencillos por parte del usuario.
+
+### 2.2. Funcionalidad del producto
+
+El sistema debe:
+
+- Permitir chatear con otros participantes con el rol de usuario.
+- Moderar las publicaciones y usuarios que infrinjan las reglas del sitio con el rol de administrador.
+- Permitir almacenar y modificar publicaciones, comentarios y perfiles.
+- Notificar al usuario sobre algún evento ocurrido en su cuenta (mensajes, publicaciones, anuncios del sistema).
+
+
