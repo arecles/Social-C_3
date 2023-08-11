@@ -89,5 +89,25 @@ El sistema debe:
 | Escenarios de excepción    | El usuario completa los campos en blanco. |
 
 
+| Designación                | RF05                       |
+|----------------------------|----------------------------|
+| Nombre                     | Chatear Usuario            |
+| Prioridad                  | Alta                       |
+| Descripción                | Permite interactuar directamente con uno o varios usuarios. |
+| Acontecimiento desencadenante | El usuario desea interactuar con otro usuario en un chat. |
+| Actores                    | Usuario                    |
+| Pre-condición              | El permiso de chat entre usuarios concedido. |
+| Post-condición             | Envío y recepción de mensajes. |
+| Resultado                  | El usuario interactúa mediante mensajes con otro usuario. |
+| Escenario principal        | El usuario selecciona el apartado de “chats”.
+El usuario selecciona el usuario para chatear.
+El sistema notifica el estado de conexión del otro usuario.
+El usuario envía un mensaje. |
+| Escenario alternativo      | El sistema detecta que el permiso de chat entre usuarios no está concedido.
+3a1. El sistema notifica los pasos para poder chatear. |
+| Escenarios de excepción    | El usuario abandona el sistema. |
+
+
+
 
 
