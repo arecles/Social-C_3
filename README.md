@@ -119,7 +119,9 @@ El sistema debe:
 | Escenarios de excepción    | El usuario abandona el sistema. |
 
 
+
 ### 3.2. Requisitos No Funcionales 
+
 
 | Designación           | RNF01                      |
 |-----------------------|-----------------------------|
