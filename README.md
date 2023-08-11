@@ -155,6 +155,119 @@ El sistema debe:
 | Descripción           | El sistema debe almacenar las interacciones de los usuarios (publicaciones, comentarios, perfiles, chats) sin que afecte al tiempo de respuesta. |
 
 
+# 4. Estilos de programación
+### 4.1. Monolitic
+Todo el proceso de registro dentro de un solo componente `Registro`. La interfaz de usuario, el manejo de eventos, la actualización de estados y la lógica de registro están contenidos en una sola entidad.
+
+### 4.2. Hollywood
+En este estilo, el flujo de control es manejado por una entidad central, y las partes del sistema son invocadas por esa entidad en respuesta a eventos o solicitudes.
+En lugar de que un componente externo llame directamente a funciones en `Registro`, el flujo de control es controlado por React y los eventos, donde el componente `Registro` es "llamado" cuando se presenta el formulario o cuando se envía el registro.
+
+```jsx
+import { useContext } from "react";
+import { Alert, Button, Form, Row, Col, Stack } from "react-bootstrap";
+import { AutorContext } from "../context/AutorContext";
+
+const Registro = () => {
+    const {
+        registerInfo,
+        updateRegisterInfo,
+        registerUser,
+        registerError,
+        isRegisterLoading,
+    } = useContext(AutorContext);
+
+    return (
+        <>
+            <Form onSubmit={registerUser}>
+                <Row className="Formulario">
+                    <Col xs={6}>
+                        <Stack gap={3}>
+                            <h2>Registro</h2>
+
+                            <Form.Control
+                                type="text"
+                                placeholder="Nombre"
+                                onChange={(e) =>
+                                    updateRegisterInfo({
+                                        ...registerInfo,
+                                        name: e.target.value,
+                                    })
+                                }
+                            />
+                            <Form.Control
+                                type="email"
+                                placeholder="Email"
+                                onChange={(e) =>
+                                    updateRegisterInfo({
+                                        ...registerInfo,
+                                        email: e.target.value,
+                                    })
+                                }
+                            />
+                            <Form.Control
+                                type="password"
+                                placeholder="Contraseña"
+                                onChange={(e) =>
+                                    updateRegisterInfo({
+                                        ...registerInfo,
+                                        password: e.target.value,
+                                    })
+                                }
+                            />
+                            <Button variant="primary" type="submit">
+                                {isRegisterLoading ? "Creando tu cuenta" : "Registro"}
+                            </Button>
+                            {registerError?.error && (
+                                <Alert variant="danger">
+                                    <p>{registerError?.message}</p>
+                                </Alert>
+                            )}
+
+                        </Stack>
+                    </Col>
+                </Row>
+            </Form>
+        </>
+    );
+}
+
+export default Registro;
+```
+
+# 5. Principios SOLID
+### 5.1 Principio de Responsabilidad Única
+La función `postRequest` tiene una sola responsabilidad, que es manejar solicitudes HTTP POST y manejar las respuestas asociadas.
+
+```jsx
+export const baseUrl = "http://localhost:5000/api"; 
+
+export const postRequest = async(url, body) => {
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json",
+        },
+        body, 
+    });
+
+    const data = await response.json();
+
+    if(!response.ok){
+        let message;
+
+        if(data?.message){
+            message = data.message;
+        }else{
+            message = data;
+        }
+
+        return {error: true, message};
+    }
+
+    return data;
+};
+```
 
 
 
