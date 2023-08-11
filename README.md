@@ -56,7 +56,7 @@ El sistema debe:
 - Se asume que los requisitos descritos son estables dentro del alcance del sistema.
 - Los equipos en los que se ejecutará el sistema deben cumplir con los requisitos tecnológicos del sistema para su correcto funcionamiento.
 
-## 1. Requisitos específicos
+## 3. Requisitos específicos
 ### 3.1. Requisitos Funcionales 
 
 | Designación                | RF01                       |
@@ -72,6 +72,21 @@ El sistema debe:
 | Escenario principal        | El usuario/administrador ingresa su nombre de usuario y contraseña. El usuario/administrador valida su registro con un captcha. El sistema valida los datos ingresados. El usuario/administrador entra al sistema.|                          
 | Escenario alternativo      | El usuario/administrador ingresa su nombre de usuario o contraseña incorrecta. 1a1.  El sistema notifica los datos incorrectos al usuario/administrador. El usuario/administrador no resuelve de manera correcta el captcha. 2a1.  El sistema notifica error de login. |
 | Escenarios de excepción    | El usuario/administrador no ingresa ningún dato. |
+
+| Designación                | RF03                       |
+|----------------------------|----------------------------|
+| Nombre                     | Registro                   |
+| Prioridad                  | Alta                       |
+| Descripción                | Permite al usuario registrar una cuenta. |
+| Acontecimiento desencadenante | El usuario desea interactuar con el sistema. |
+| Actores                    | Usuario                    |
+| Pre-condición              | El usuario no tiene una cuenta. |
+| Post-condición             | Validar registro RF04.     |
+| Resultado                  | El usuario tiene una cuenta. |
+| Escenario principal        | El usuario ingresa al registro. Se llenan los campos correspondientes. El sistema valida el registro. El usuario tiene una cuenta nueva. |
+| Escenario alternativo      | El usuario completa de manera incorrecta los campos. 1a1. El sistema notifica error al llenar campos. El usuario ingresa un correo o número de teléfono inaccesibles. 2a1. El sistema no procesa el registro. |
+| Escenarios de excepción    | El usuario completa los campos en blanco. |
+
 
 
 
