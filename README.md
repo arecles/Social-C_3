@@ -238,7 +238,7 @@ export default Registro;
 
 ### 4.3. Cookbook
 
-Las funciones createChat, findUserChatsy findChaten tu código pueden relacionarse con el estilo Cookbook en el sentido de que cada función aborda una tarea específica y bien definida. Cada función representa una "receta" para realizar una operación particular en la base de datos relacionados con los chats.
+Las funciones `createChat`, `findUserChats` y `findChat` pueden relacionarse con el estilo Cookbook en el sentido de que cada función aborda una tarea específica y bien definida. Cada función representa una "receta" para realizar una operación particular en la base de datos relacionados con los chats.
 
 
 ```jsx
