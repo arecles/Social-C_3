@@ -66,10 +66,8 @@ El sistema debe:
 | Pre-condición              | El usuario/administrador debe estar registrado. |
 | Post-condición             | Validar el login RF02.     |
 | Resultado                  | Inicio de sesión en el sistema |
-| Escenario principal        | El usuario/administrador ingresa su nombre de usuario y contraseña. El usuario/administrador valida su registro con un captcha. El sistema valida los datos ingresados. El | usuario/administrador entra al sistema.|                          
-| Escenario alternativo      | El usuario/administrador ingresa su nombre de usuario o contraseña incorrecta.
-1a1.  El sistema notifica los datos incorrectos al usuario/administrador.
-El usuario/administrador no resuelve de manera correcta el captcha.
+| Escenario principal        | El usuario/administrador ingresa su nombre de usuario y contraseña. El usuario/administrador valida su registro con un captcha. El sistema valida los datos ingresados. El usuario/administrador entra al sistema.|                          
+| Escenario alternativo      | El usuario/administrador ingresa su nombre de usuario o contraseña incorrecta. 1a1.  El sistema notifica los datos incorrectos al usuario/administrador. El usuario/administrador no resuelve de manera correcta el captcha. |
 2a1.  El sistema notifica error de login. |
 | Escenarios de excepción    | El usuario/administrador no ingresa ningún dato. |
 
