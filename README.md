@@ -235,7 +235,9 @@ const Registro = () => {
 export default Registro;
 ```
 
+
 ### 4.3. Cookbook
+
 
 ```jsx
 const chatModel = require("../Models/chatModel");
@@ -298,6 +300,7 @@ const findChat = async (req, res) => {
 
 module.exports = {createChat, findUserChats, findChat};
 ```
+
 
 # 5. Principios SOLID
 ### 5.1 Principio de Responsabilidad Única
