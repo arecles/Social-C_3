@@ -99,13 +99,60 @@ El sistema debe:
 | Pre-condición              | El permiso de chat entre usuarios concedido. |
 | Post-condición             | Envío y recepción de mensajes. |
 | Resultado                  | El usuario interactúa mediante mensajes con otro usuario. |
-| Escenario principal        | El usuario selecciona el apartado de “chats”.
-El usuario selecciona el usuario para chatear.
-El sistema notifica el estado de conexión del otro usuario.
-El usuario envía un mensaje. |
-| Escenario alternativo      | El sistema detecta que el permiso de chat entre usuarios no está concedido.
-3a1. El sistema notifica los pasos para poder chatear. |
+| Escenario principal        | El usuario selecciona el apartado de “chats”. El usuario selecciona el usuario para chatear. El sistema notifica el estado de conexión del otro usuario. El usuario envía un mensaje. |
+| Escenario alternativo      | El sistema detecta que el permiso de chat entre usuarios no está concedido. 3a1. El sistema notifica los pasos para poder chatear. |
 | Escenarios de excepción    | El usuario abandona el sistema. |
+
+
+| Designación                | RF06                       |
+|----------------------------|----------------------------|
+| Nombre                     | Enviar y recibir mensaje   |
+| Prioridad                  | Alta                       |
+| Descripción                | Permite la comunicación directa de un usuario con otro a través del chat. |
+| Acontecimiento desencadenante | El usuario desea iniciar una conversación/abrir chat. |
+| Actores                    | Usuario                    |
+| Pre-condición              | El permiso de chat entre usuarios concedido. Módulo de chat abierto.     |
+| Post-condición             | Ninguna.                   |
+| Resultado                  | El usuario interactúa mediante mensajes con otro usuario. |
+| Escenario principal        | El usuario recibe el mensaje de otro usuario. El usuario envía el mensaje al otro usuario. El sistema verifica el envío y la llegada del mensaje. El otro usuario recibe el mensaje. |
+| Escenario alternativo      | El sistema no detecta la llegada o el envío del mensaje. 3a1. El sistema notifica al usuario con “Error de envío/llegada” |
+| Escenarios de excepción    | El usuario abandona el sistema. |
+
+
+### 3.2. Requisitos No Funcionales 
+
+| Designación           | RNF01                      |
+|-----------------------|-----------------------------|
+| Nombre                | Interfaz del sistema       |
+| Prioridad             | Alta                        |
+| Características       | El sistema presentará una interfaz de usuario sencilla, y con pocos elementos decorativos, para permitir una buena interacción entre usuario e interfaz. |
+| Descripción           | La interfaz debe ser lo menos compleja posible. |
+
+
+| Designación           | RNF02                      |
+|-----------------------|-----------------------------|
+| Nombre                | Compatibilidad             |
+| Prioridad             | Alta                        |
+| Características       | El sistema proporcionará un entorno adecuado para los distintos navegadores y dispositivos. |
+| Descripción           | El sistema debe ser capaz de adaptarse a todo tipo de medio. |
+
+
+| Designación           | RNF03                      |
+|-----------------------|-----------------------------|
+| Nombre                | Seguridad                  |
+| Prioridad             | Alta                        |
+| Características       | La seguridad del sistema se enfocará en proteger información crítica, valiosa o sensible para la organización. |
+| Descripción           | El sistema garantiza seguridad con respecto a los datos del usuario que se impliquen en el sistema. |
+
+
+| Designación           | RNF04                      |
+|-----------------------|-----------------------------|
+| Nombre                | Desempeño                  |
+| Prioridad             | Alta                        |
+| Características       | El sistema garantiza la interacción de los usuarios de manera eficiente. |
+| Descripción           | El sistema debe almacenar las interacciones de los usuarios (publicaciones, comentarios, perfiles, chats) sin que afecte al tiempo de respuesta. |
+
+
 
 
 
