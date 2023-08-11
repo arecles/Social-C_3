@@ -56,9 +56,8 @@ El sistema debe:
 - Se asume que los requisitos descritos son estables dentro del alcance del sistema.
 - Los equipos en los que se ejecutará el sistema deben cumplir con los requisitos tecnológicos del sistema para su correcto funcionamiento.
 
-## 3. Requisitos específicos
-
-### 3.1.Requisitos Funcionales 
+## 1. Requisitos específicos
+### 3.1. Requisitos Funcionales 
 
 | Designación                | RF01                       |
 |----------------------------|----------------------------|
